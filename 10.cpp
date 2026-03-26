@@ -19,8 +19,8 @@ int get(int p){
     return sum;
 }
 signed main() {
-    freopen(ily2107".inp","r",stdin);
-    freopen(ily2107".out","w",stdout);
+    // freopen(ily2107".inp","r",stdin);
+    // freopen(ily2107".out","w",stdout);
     ios_base::sync_with_stdio(0);
     cin.tie(0);cout.tie(0);
     while (cin >> a[++n].fi) {
