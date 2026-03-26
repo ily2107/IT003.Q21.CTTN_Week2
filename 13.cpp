@@ -1,11 +1,7 @@
 //Created by Vũ Thị Thu Hường
 #include <bits/stdc++.h>
 using namespace std;
-#define fi first
-#define se second
 // #define int long long
-#define ily2107 "ily2107"
-#define time (1.0*clock()/CLOCKS_PER_SEC)
 const int N=5e6+5;
 int n,a[N];
 signed main() {
@@ -19,7 +15,7 @@ signed main() {
     cin >> x;
     int l=1,r=n;
     while (l<=r){
-        int d=(l+r)/2;
+        int d=(l+r)>>1;
         if (a[d]==x){
             cout << "YES";
             return 0;
@@ -33,5 +29,4 @@ signed main() {
         }
     }
     cout << "NO";
-    return 0;
 }
