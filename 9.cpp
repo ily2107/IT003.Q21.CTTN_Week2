@@ -13,7 +13,7 @@ bool cry(int need) {
     int j=1;
     for (int i=1;i<=n;++i) {
         if (a[i]>=need) continue;
-        while (j<=m && b[i]<need-a[j]) ++j;
+        while (j<=m && b[j]<need-a[i]) ++j;
         if (j>m) return false;
         cur.push_back({i,j});
         ++j;
@@ -21,15 +21,15 @@ bool cry(int need) {
     return true;
 }
 signed main() {
-    freopen(ily2107".inp","r",stdin);
-    freopen(ily2107".out","w",stdout);
+    // freopen(ily2107".inp","r",stdin);
+    // freopen(ily2107".out","w",stdout);
     ios_base::sync_with_stdio(0);
     cin.tie(0);cout.tie(0);
     cin >> n;
     for (int i=1;i<=n;++i) cin >> a[i];
     cin >> m;
     for (int i=1;i<=m;++i) cin >> b[i];
-    int l=1,r=1e9;
+    int l=1,r=1e18;
     while (l<=r) {
         int d=(l+r)>>1;
         if (cry(d)) {
