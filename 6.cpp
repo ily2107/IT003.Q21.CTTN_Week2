@@ -6,7 +6,7 @@ using namespace std;
 #define int long long
 #define ily2107 "ily2107"
 #define time (1.0*clock()/CLOCKS_PER_SEC)
-const int N=1e6+5;
+const int N=1e5+5;
 int n,cnt;
 string a[N],temp[N];
 void merge(int l,int d,int r) {
@@ -30,8 +30,8 @@ void mesrt(int l,int r) {
     merge(l,d,r);
 }
 signed main() {
-    freopen(ily2107".inp","r",stdin);
-    freopen(ily2107".out","w",stdout);
+    // freopen(ily2107".inp","r",stdin);
+    // freopen(ily2107".out","w",stdout);
     ios_base::sync_with_stdio(0);
     cin.tie(0);cout.tie(0); 
     cin >> n;
