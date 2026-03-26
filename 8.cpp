@@ -1,11 +1,4 @@
 //Created by Vũ Thị Thu Hường
-#include <bits/stdc++.h>
-using namespace std;
-#define fi first
-#define se second
-#define int long long
-#define ily2107 "ily2107"
-#define time (1.0*clock()/CLOCKS_PER_SEC)
 const int N=1e5+5;
 int n,k,ans,a[N],temp[N];
 void merge(int l,int d,int r) {
@@ -29,17 +22,19 @@ void mesrt(int l,int r) {
     merge(l,d,r);
 }
 signed main() {
-    freopen(ily2107".inp","r",stdin);
-    freopen(ily2107".out","w",stdout);
-    ios_base::sync_with_stdio(0);
-    cin.tie(0);cout.tie(0);
+    // freopen(ily2107".inp","r",stdin);
+    // freopen(ily2107".out","w",stdout);
+    // ios_base::sync_with_stdio(0);
+    // cin.tie(0);cout.tie(0);
     cin >> n >> k;
     for (int i=1;i<=n;++i) cin >> a[i];
     mesrt(1,n);
     int l=1,r=n;
     while (l<r) {
-        if (a[l]+a[r]<=k) ans=max(ans,a[l]+a[r]),++l;
-        else --r;
+        if (a[l]+a[r]<=k) {
+            if (a[l]+a[r]>ans) ans=a[l]+a[r];
+            ++l;
+        } else --r;
     }
     cout << ans;
     return 0;
